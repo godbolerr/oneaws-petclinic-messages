@@ -17,17 +17,21 @@ package com.work.petclinic.messages.repository;
 
 import java.util.Collection;
 
+import org.springframework.data.repository.Repository;
+
 import com.work.petclinic.messages.model.Message;
 
 /**
  * @author Rob Winch
  */
-public interface MessageRepository  {
+public interface MessageRepository extends Repository<Message, Long> {
 
 	Collection<Message> findAll();
 
 	Message save(Message message);
 
 	Message findById(Long id);
+	
+	Message findOne(Long id);
 
 }

@@ -18,6 +18,8 @@ package com.work.petclinic.messages.model;
 import java.util.Calendar;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -29,8 +31,8 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper=true)
-//@Entity
-//@Table(name = "user_messages")
+@Entity
+@Table(name = "user_messages")
 public class Message extends BaseEntity {
 
 	private static final long serialVersionUID = -4768045909580278883L;
