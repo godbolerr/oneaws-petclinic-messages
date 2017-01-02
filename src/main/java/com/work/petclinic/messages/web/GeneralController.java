@@ -31,7 +31,7 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * Controller that handles the home page and exceptional cases.
- *
+ * 
  * @author Arnaldo Piccinelli
  */
 @Controller
