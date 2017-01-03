@@ -381,11 +381,11 @@
 					"cd /var/www/oneawsmsg1 \n",					
 					"export SERVER_PORT=" ,  { "Ref" : "Port1" } ," \n",
 					"mvn -Dserver.port=",  { "Ref" : "Port1" } , 
-					" -Ddb.url=jdbc:mysql://",	{ "Ref" : "DBHost" }, ":" ,  { "Ref" : "DBPort" } , "/petclinicdb  spring-boot::run & \n",
+					" -Ddb.url=jdbc:mysql://",	{ "Ref" : "DBHost" }, ":" ,  { "Ref" : "DBPort" } , "/petclinicdb  spring-boot::run  -Drun.arguments=--server.port=", { "Ref" : "Port1" } , "& \n",
 					"cd /var/www/oneawsmsg2 \n",					
 					"export SERVER_PORT=" ,  { "Ref" : "Port2" } ," \n",
 					"mvn -Dserver.port=",  { "Ref" : "Port2" } , 					
-					" -Ddb.url=jdbc:mysql://",	{ "Ref" : "DBHost" }, ":" ,  { "Ref" : "DBPort" } , "/petclinicdb  spring-boot::run & \n"
+					" -Ddb.url=jdbc:mysql://",	{ "Ref" : "DBHost" }, ":" ,  { "Ref" : "DBPort" } , "/petclinicdb  spring-boot::run  -Drun.arguments=--server.port=", { "Ref" : "Port2" } , "& \n"
 				]]}}
 				
 				
