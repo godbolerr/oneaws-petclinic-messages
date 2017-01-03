@@ -19,7 +19,7 @@
 	</organization>
 
 	<properties>
-		<start-class>com.work.petclinic.SampleWebUiApplication</start-class>
+		<start-class>com.work.petclinic.messages.PetclinicMessageApplication</start-class>
 
 		<java.version>1.8</java.version>
 
