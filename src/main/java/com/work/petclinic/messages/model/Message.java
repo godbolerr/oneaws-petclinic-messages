@@ -1,18 +1,3 @@
-/*
- * Copyright 2002-2014 the original author or authors.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *	  http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package com.work.petclinic.messages.model;
 
 import java.util.Calendar;
@@ -23,14 +8,6 @@ import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-
-/**
- * @author Rob Winch
- */
-@Data
-@EqualsAndHashCode(callSuper=true)
 @Entity
 @Table(name = "user_messages")
 public class Message extends BaseEntity {
@@ -44,6 +21,69 @@ public class Message extends BaseEntity {
 	@Column
 	@NotEmpty
 	private String summary;
+	
+	@Column
+	@NotEmpty
+	private String user;	
 
 	private Calendar created = Calendar.getInstance();
+
+	/**
+	 * @return the messageText
+	 */
+	public String getMessageText() {
+		return messageText;
+	}
+
+	/**
+	 * @param messageText the messageText to set
+	 */
+	public void setMessageText(String messageText) {
+		this.messageText = messageText;
+	}
+
+	/**
+	 * @return the summary
+	 */
+	public String getSummary() {
+		return summary;
+	}
+
+	/**
+	 * @param summary the summary to set
+	 */
+	public void setSummary(String summary) {
+		this.summary = summary;
+	}
+
+	/**
+	 * @return the user
+	 */
+	public String getUser() {
+		return user;
+	}
+
+	/**
+	 * @param user the user to set
+	 */
+	public void setUser(String user) {
+		this.user = user;
+	}
+
+	/**
+	 * @return the created
+	 */
+	public Calendar getCreated() {
+		return created;
+	}
+
+	/**
+	 * @param created the created to set
+	 */
+	public void setCreated(Calendar created) {
+		this.created = created;
+	}
+	
+	
+	
 }
